@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Footer from '../components/Footer'
 import CardContents from "../components/CardContents";
+import SampleButton from "../components/SampleButton";
 import * as styles from '../styles/home.css'
 
 const Home: NextPage = () => {
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
         </p>
         <CardContents/>
       </main>
-
+      <SampleButton title={'TEST'} kind={'primary'}/>
       <Footer/>
     </div>
   )

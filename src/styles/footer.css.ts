@@ -14,7 +14,7 @@ export const logo = style({
   marginLeft:'0.5rem'
 })
 
-globalStyle(`${footer} a`,{
+globalStyle(`${footer} > a`,{
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
