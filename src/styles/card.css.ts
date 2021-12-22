@@ -1,4 +1,5 @@
 import {style,globalStyle} from '@vanilla-extract/css'
+import {vars} from './theme.css'
 
 export const grid = style({
   display: 'flex',
@@ -20,13 +21,13 @@ export const card = style({
   textAlign: 'left',
   color: 'inherit',
   textDecoration: 'none',
-  border: '1px solid #eaeaea',
+  border: `1px solid ${vars.textColor.border}`,
   borderRadius: '10px',
   transition: 'color 0.15s ease, border-color 0.15s ease',
   maxWidth: '300px',
   ':hover': {
-    color: '#0070f3',
-    borderColor: '#0070f3'
+    color: vars.textColor.primary,
+    borderColor: vars.textColor.primary
   },
 })
 

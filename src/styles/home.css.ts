@@ -1,4 +1,5 @@
 import {style,globalStyle} from '@vanilla-extract/css'
+import {vars} from './theme.css'
 
 export const container = style({
   padding:'0 2rem'
@@ -27,11 +28,11 @@ export const description = style({
 })
 
 export const code = style({
-  background: '#fafafa',
+  background: vars.textColor.gray100,
   borderRadius: '5px',
   padding: '0.75rem',
   fontSize: '1.1rem',
-  fontFamily: 'Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,Bitstream Vera Sans Mono, Courier New, monospace'
+  fontFamily: vars.font.code
 })
 
 globalStyle(`${title} ${description}`,{
@@ -39,10 +40,10 @@ globalStyle(`${title} ${description}`,{
 })
 
 globalStyle(`${title} a`,{
-  color:'#0070f3',
+  color:vars.textColor.primary,
   textDecoration:'none',
 })
 
-globalStyle(`${title} a:hover,:active,:focus`,{
+globalStyle(`${title} a:hover,${title} a:active,${title} a:focus`,{
   textDecoration:'underline'
 })
